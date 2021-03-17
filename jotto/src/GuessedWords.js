@@ -29,7 +29,7 @@ const GuessedWords = (props) => {
       </div>
     );
   }
-  return <div data-test="component-guessed-words">{contents}</div>;
+  return <div className="container text-center" data-test="component-guessed-words">{contents}</div>;
 };
 
 GuessedWords.propTypes = {
