@@ -46,7 +46,7 @@ test("should `getSecretWord` runs on App mount", () => {
   const props = {
     getSecretWord: getSecretWordMock,
     success: false,
-    guessedWords: [],
+    guessedWords : [],
   };
 
   const wrapper = shallow(<UnconnectedApp {...props} />);
