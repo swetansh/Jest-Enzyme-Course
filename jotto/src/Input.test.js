@@ -53,3 +53,17 @@ describe("render", () => {
     });
   });
 });
+
+describe("Redux props", () => {
+  test("should have success piece of state as prop", () => {
+    const success = true;
+    const wrapper = setup({ success });
+    const successProp = wrapper.instance().props.success;
+    expect(successProp).toBe(success);
+  });
+  test("should have `guessWord` action creater is a function prop", () => {
+    const wrapper = setup();
+    const guessWordProp = wrapper.instance().props.guessWord;
+    expect(guessWordProp).toBeInstanceOf(Function);
+  });
+});
